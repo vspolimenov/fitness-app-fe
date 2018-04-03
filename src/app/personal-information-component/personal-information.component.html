@@ -1,0 +1,95 @@
+<div>
+    <div class="row">
+        <div class="col-md-12 personalInformationTitle block-container">
+            <h1>Vasilen Polimenov</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 block-container">
+
+            <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236">
+
+        </div>
+        <div class="col-md-4 block-container">
+
+            <span>
+                <b>Age</b>: 21</span>
+            <span>
+                <b>Gender</b>: Male</span>
+            <span>
+                <b>Height</b>: 1.74</span>
+            <span>
+                <b>Weight</b>: 72</span>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-6 block-container">
+            <span>
+                <b>Calories per Day</b>: 2600</span>
+            <span>
+                <b>Proteins per Day</b>: 160</span>
+            <span>
+                <b>Carbs per Day</b>: 200</span>
+            <span>
+                <b>Fats per Day</b>: 100</span>
+            <span>
+                <b>Vitamin C per Day</b>: 300 mg</span>
+            <span>
+                <b>Magnesium per Day</b>: 80 mg</span>
+            <span>
+                <b>Vitamin D per Day</b>: 4 ug</span>
+            <span>
+                <b>Vitamin B12 per Day</b>: 1 ug</span>
+            <span>
+                <b>Omega 3 per Day</b>: 6 ug</span>
+        </div>
+        <div class="col-md-6 block-container">
+                <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236"> 
+                <br>
+                <br>
+                <br>
+                <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236"> 
+                <br>
+                <br>
+                <br>
+                <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236"> 
+            </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br> <h3>Workouts </h3>
+    <button class="btn">Change Program</button>
+    <br>
+    <br>
+    <br>
+    <div class="row program">
+       
+            <div *ngFor="let workout of workouts " class="training-padding">
+                <b>04.02.2018</b>
+                <br>
+                <b>Day A</b>
+                    <div *ngFor="let exercise of workout.exercises">
+        
+                        <div class="row">
+                                <div class="col-m-3 exCol">{{exercise.name}}</div>
+                                <div class="col-m-3 exCol">
+                                        {{exercise.rep}}  
+                                </div>
+                                <div class="col-m-3 exCol">
+                                        {{exercise.set}} 
+                                </div>
+                                <div class="col-m-3 exCol">
+                                        {{exercise.weight}} 
+                                </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <button class="btn">Last Month</button>
+        <br>
+        <br>
+        
+</div>

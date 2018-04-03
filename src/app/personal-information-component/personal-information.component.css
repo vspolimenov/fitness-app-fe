@@ -1,0 +1,45 @@
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.block-container span { 
+    display: block;
+    font-size: 24px;
+    padding-bottom: 4px;
+    padding-top: 20px;
+    margin-right: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f1f1f1;
+    min-width: 280px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.personalInformationTitle{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.program{
+    font-size: 10px;
+}
+
+.exCol {
+    margin: 50px;
+}
+
+.training-padding{
+    padding-left: 100px; 
+}

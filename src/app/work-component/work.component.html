@@ -1,0 +1,47 @@
+<div class="page">
+    <div class="title workoutTitle">
+        <h1>Training</h1>
+    </div>
+    <div class="timer row" *ngIf="!isStarted">
+
+        <div class="col-md-4">
+            <p>Ok, now you will press the timer and your training will begin.
+                Hustle hard!
+            </p>
+        </div>
+        <div class="col-md4">
+
+
+            <img src="../assets/5_timer_time_count_game_design_flat_icon-512.png" (click)="start();" class="img-rounded" alt="img" width="300px"
+                height="300px">
+        </div>
+    </div>
+    <div class="content" *ngIf="isStarted">
+        <h2>Day A</h2>
+        <p>{{date | date:'yyyy-MM-dd'}}</p>
+
+        <div *ngFor="let workout of workouts">
+
+            <div *ngFor="let exercise of workout.exercises">
+
+                <div class="row">
+
+                    <div class="col-m-3 exCol">{{exercise.name}}</div>
+                    <div class="col-m-3 exCol">
+                        <input placeHolder="Sets" type="text">
+                    </div>
+                    <div class="col-m-3 exCol">
+                        <input placeHolder="Reps" type="text">
+                    </div>
+                    <div class="col-m-3 exCol">
+                        <input placeHolder="Weights" type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <img src="../assets/5_timer_time_count_game_design_flat_icon-512.png"  (click)=stop(); class="img-rounded" alt="img" width="100px" height="100px"> 
+        <p>Finish session</p>
+    </div>
+</div>
