@@ -1,3 +1,4 @@
+import { AuthenticationService } from './../login-component/login.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,12 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class SetingsComponent  implements OnInit {
   public ageActivated:boolean;
   
-  constructor() {
+  constructor( private _service:AuthenticationService) {
   this.ageActivated = false;
   }
 
 
   ngOnInit() {
+    this._service.checkCredentials();
   }
 
   activateAge(){

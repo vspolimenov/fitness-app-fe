@@ -1,0 +1,42 @@
+<div class="container">
+   
+    <div class="title">
+       <h1>
+         Let me tell you something you already know. </h1><br>
+        
+         "The world ain’t all sunshine and rainbows. 
+        It’s a very mean and nasty place and I don’t care how tough you are it will beat you to your knees and keep you there permanently if you let it.     
+         You, me, or nobody is gonna hit as hard as life. 
+         But it ain’t about how hard ya hit. It’s about how hard you can get hit and keep moving forward. 
+        How much you can take and keep moving forward. That’s how winning is done! Now if you know what you’re worth then go out and get what you’re worth. But ya gotta be willing to take the hits, and not pointing fingers saying you ain’t where you wanna be because of him, or her, or anybody!
+         Cowards do that and that ain’t you! You’re better than that!"  <br> <br>   <br>
+         <h6>Rocky Balboa’s Inspirational Speech To His Son. </h6>
+    </div>
+    <br>
+  <br> <br> <br>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <div class="input-field col-sm-12">
+                    <input [(ngModel)]="user.email" id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col-sm-12">
+                    <input [(ngModel)]="user.password" id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <span>{{errorMsg}}</span>
+        <button (click)="login()" class="btn waves-effect waves-light" type="submit" name="action">Login</button>
+        </div>
+        <div class="loader" *ngIf="!isLoaded"></div>
+        <div class="col-md-4">
+
+            <img class="rounded" src="../assets/chep.jpg" alt="New York" width="600" height="500">
+        </div>
+        
+    </div>
+</div>

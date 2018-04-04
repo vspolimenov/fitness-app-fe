@@ -54,7 +54,15 @@
     margin-bottom: 10%; 
     padding-bottom: 10%; 
 }
-
+.admin-navbar {
+    z-index: 1;
+    background-color:  grey;
+    color:black;
+    top: 10%;
+    width: 100%;
+    height: 7%;
+    padding: 10px;
+}
 
 .navbar {
     z-index: 1;
@@ -85,5 +93,16 @@ a {
   text-decoration: none!important; 
   color: #46ADC6!important;
 }
-  
+.progress-bar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    background-color: #ffa100;
+    transition: width .6s ease;
+}
 

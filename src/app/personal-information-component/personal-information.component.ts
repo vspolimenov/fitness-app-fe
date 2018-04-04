@@ -1,3 +1,4 @@
+import { AuthenticationService } from './../login-component/login.service';
 import { Workout } from './../model/workout';
 import { Component, OnInit } from '@angular/core';
 import { Exercise } from '../model/exercise';
@@ -12,7 +13,7 @@ export class PersonalInformationComponent implements OnInit  {
   workouts:Workout[];
   date:Date;
   isStarted:boolean;
-  constructor() {
+  constructor( private _service:AuthenticationService) {
     this.date = new Date();
   
     this.workouts= [new Workout(), new Workout(), new Workout(), new Workout()];
@@ -28,5 +29,6 @@ export class PersonalInformationComponent implements OnInit  {
 
 
   ngOnInit() {
+    this._service.checkCredentials();
   }
 }

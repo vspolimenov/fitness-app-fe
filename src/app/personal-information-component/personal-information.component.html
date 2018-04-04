@@ -73,6 +73,18 @@
                 <b>Day A</b>
                     <div *ngFor="let exercise of workout.exercises">
         
+                            <div class="row">
+                                    <div class="col-m-3 exCol">Exercise</div>
+                                    <div class="col-m-3 exCol">
+                                          Reps  
+                                    </div>
+                                    <div class="col-m-3 exCol">
+                                            Sets
+                                    </div>
+                                    <div class="col-m-3 exCol">
+                                            Weight 
+                                    </div>
+                            </div>
                         <div class="row">
                                 <div class="col-m-3 exCol">{{exercise.name}}</div>
                                 <div class="col-m-3 exCol">

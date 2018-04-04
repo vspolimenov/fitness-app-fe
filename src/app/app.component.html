@@ -1,35 +1,75 @@
 <div>
-
   <div class="header">
     <h1>Yolo - The Real Personal Trainer
     </h1>
   </div>
-  <div class=" navbar">
-    <div class="inline-bar">
-      <a class="btn btn-link" routerLink="/technologies">My Day</a>
-      <a class="btn btn-link" routerLink="/work">Training Mode</a>
-      <a class="btn btn-link" routerLink="/setings">Setings</a>
-      <a class="btn btn-link" routerLink="/trainers">Trainers</a>
-    </div>
-  </div>
-  <div class="row">
-    <div class="sidenav col-md-2">
-      <div>
-       <p><b>Progressing level</b></p>
-        <br>
-          <p>Addidas badka<br></p>
-          <p>Hulk<br></p>
-          <p>Monster<br></p>
-         <p>One month <br></p>
-       <a routerLink="/personal-information">
-        <img src="../assets/2.png" class="img-rounded" alt="img" width="50px" height="50px"> </a>
-        <p>Amateur <br></p>
-       
+  <div>
+    <div class="navbar" *ngIf="!isTrainer()">
+      <div class="inline-bar">
+        <a class="btn btn-link" *ngIf="isLogged" (click)="checkLogin()" routerLink="/technologies">My Day</a>
+        <a class="btn btn-link" *ngIf="isLogged" (click)="checkLogin()" routerLink="/work">Training Mode</a>
+        <a class="btn btn-link" *ngIf="isLogged" (click)="checkLogin()" routerLink="/setings">Setings</a>
+        <a class="btn btn-link" *ngIf="isLogged" (click)="checkLogin()" routerLink="/trainers">Trainers</a>
+        <a class="btn btn-link" *ngIf="!isLogged" (click)="checkLogin()" routerLink="/registration">Registration</a>
+        <a class="btn btn-link" *ngIf="!isLogged" (click)="checkLogin()" routerLink="/login">Login</a>
+        <a class="btn btn-link" (click)="logout()" *ngIf="isLogged" href="#">Logout</a>
       </div>
     </div>
-    <div class="col-md-2"></div>
-    <div class="content col-md-9">
-      <router-outlet></router-outlet>
+    <div class="admin-navbar" *ngIf="isTrainer()">
+      <div class="inline-bar">
+        <a class="btn btn-link" *ngIf="isLogged" (click)="checkLogin()" routerLink="/technologies">My Day</a>
+        <a class="btn btn-link" *ngIf="isLogged" (click)="checkLogin()" routerLink="/work">Training Mode</a>
+        <a class="btn btn-link" *ngIf="isLogged" (click)="checkLogin()" routerLink="/setings">Setings</a>
+        <a class="btn btn-link" *ngIf="isLogged " (click)="checkLogin()" routerLink="/clients">Clients</a>
+        <a class="btn btn-link" *ngIf="!isLogged" (click)="checkLogin()" routerLink="/registration">Registration</a>
+        <a class="btn btn-link" *ngIf="!isLogged" (click)="checkLogin()" routerLink="/login">Login</a>
+        <a class="btn btn-link" (click)="logout()" *ngIf="isLogged" href="#">Logout</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="sidenav col-md-2 " *ngIf="isLogged">
+        <div>
+       
+          <p>
+            <b>Progressing level</b>
+          </p>
+     
+            <br>
+          <p>Addidas badka
+            <br>
+          </p>
+          <p>Hulk
+            <br>
+          </p>
+          <p>Monster
+            <br>
+          </p>
+          <p>One month
+            <br>
+          </p>
+          <a routerLink="/personal-information">
+            <img src="../assets/2.png" class="img-rounded" alt="img" width="50px" height="50px"> </a>
+            <div class="container">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                    style="width:60%">
+                    60%
+                  </div>
+                </div>
+              </div>
+              <br>
+            <p>Amateur
+            <br>
+          </p>
+
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="content col-md-9">
+
+        <router-outlet></router-outlet>
+
+      </div>
     </div>
   </div>
-</div>

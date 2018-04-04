@@ -1,3 +1,9 @@
+import { WorkoutComponent } from './articles/workout-component/workout.component';
+import { FoodComponent } from './articles/food-component/food.component';
+import { LifeStyleComponent } from './articles/life-style-component/lifestyle.component';
+import { RegistrationComponent } from './registration-component/registration.component';
+import { LoginComponent } from './login-component/login.component';
+import { ClientsComponent } from './clients-component/clients.component';
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
  
@@ -13,7 +19,13 @@ const routes: Routes = [
   { path: 'work', component: WorkComponent },
   { path: 'technologies', component: TechnologiesComponent},
   { path: 'trainers', component: TrainersComponent},
-  { path: 'setings', component: SetingsComponent}
+  { path: 'setings', component: SetingsComponent},
+  { path: 'clients', component: ClientsComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'registration', component: RegistrationComponent},
+  { path: 'lifestyle', component: LifeStyleComponent},
+  { path: 'food', component: FoodComponent},
+  { path: 'workout', component: WorkoutComponent}
 ];
  
 @NgModule({

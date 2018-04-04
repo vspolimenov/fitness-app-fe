@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { AuthenticationService } from './../login-component/login.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'technologies',
   templateUrl: './technologies.component.html',
   styleUrls: ['./technologies.component.css']
 })
-export class TechnologiesComponent {
+export class TechnologiesComponent implements OnInit{
+  public isLoaded:boolean;
   title = 'personal information';
+  constructor( private _service:AuthenticationService) {
+    this.isLoaded = false;
+  }
+  ngOnInit() {
+    this._service.checkCredentials();
+    this.isLoaded = true;
+  }
 }
