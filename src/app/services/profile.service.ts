@@ -1,4 +1,4 @@
-import { User } from './model/user';
+import { User } from '../model/user';
 import {Injectable} from '@angular/core';
 import {RouterModule, Routes, Router} from '@angular/router';
  
@@ -29,5 +29,7 @@ export class ProfileService {
         localStorage.setItem('lastName', user.lastName);
         localStorage.setItem('email', user.email);
     }
+
+    
 
 }

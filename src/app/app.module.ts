@@ -1,9 +1,11 @@
-import { ProfileService } from './profile.service';
+import { EditProgramComponent } from './edit-program-component/edit-program.component';
+import { WorkoutService } from './services/workout.service';
+import { ProfileService } from './services/profile.service';
 import { WorkoutComponent } from './articles/workout-component/workout.component';
 import { FoodComponent } from './articles/food-component/food.component';
 import { LifeStyleComponent } from './articles/life-style-component/lifestyle.component';
 import { LoginComponent } from './login-component/login.component';
-import { AuthenticationService } from './login-component/login.service';
+import { AuthenticationService } from './services/login.service';
 import { ClientsComponent } from './clients-component/clients.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -32,14 +34,15 @@ import { RegistrationComponent } from './registration-component/registration.com
     RegistrationComponent,
     LifeStyleComponent,
     WorkoutComponent,
-    FoodComponent
+    FoodComponent, 
+    EditProgramComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [AuthenticationService, ProfileService],
+  providers: [AuthenticationService, ProfileService, WorkoutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

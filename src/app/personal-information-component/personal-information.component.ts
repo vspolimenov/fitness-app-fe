@@ -1,6 +1,6 @@
-import { ProfileService } from './../profile.service';
+import { ProfileService } from './../services/profile.service';
 import { User } from './../model/user';
-import { AuthenticationService } from './../login-component/login.service';
+import { AuthenticationService } from '../services/login.service';
 import { Workout } from './../model/workout';
 import { Component, OnInit } from '@angular/core';
 import { Exercise } from '../model/exercise';

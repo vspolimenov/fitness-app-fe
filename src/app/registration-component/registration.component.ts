@@ -1,8 +1,8 @@
 import { User } from './../model/user';
 import { Router } from '@angular/router';
-import {AuthenticationService } from './../login-component/login.service';
+import {AuthenticationService } from './../services/login.service';
 import {Component, ElementRef} from '@angular/core';
-import { ProfileService } from '../profile.service';
+import { ProfileService } from '../services/profile.service';
 
  
 @Component({

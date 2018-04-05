@@ -1,3 +1,4 @@
+import { EditProgramComponent } from './edit-program-component/edit-program.component';
 import { WorkoutComponent } from './articles/workout-component/workout.component';
 import { FoodComponent } from './articles/food-component/food.component';
 import { LifeStyleComponent } from './articles/life-style-component/lifestyle.component';
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'registration', component: RegistrationComponent},
   { path: 'lifestyle', component: LifeStyleComponent},
   { path: 'food', component: FoodComponent},
-  { path: 'workout', component: WorkoutComponent}
+  { path: 'workout', component: WorkoutComponent},
+  { path: 'edit-program', component: EditProgramComponent}
 ];
  
 @NgModule({

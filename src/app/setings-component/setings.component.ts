@@ -1,6 +1,6 @@
 import { User } from './../model/user';
-import { ProfileService } from './../profile.service';
-import { AuthenticationService } from './../login-component/login.service';
+import { ProfileService } from './../services/profile.service';
+import { AuthenticationService } from './../services/login.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

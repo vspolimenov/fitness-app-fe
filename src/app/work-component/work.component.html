@@ -28,13 +28,13 @@
 
                     <div class="col-m-3 exCol">{{exercise.name}}</div>
                     <div class="col-m-3 exCol">
-                        <input placeHolder="Sets" type="text">
+                        <input placeHolder="Sets" [(ngModel)]="exercise.sets" type="number">
                     </div>
                     <div class="col-m-3 exCol">
-                        <input placeHolder="Reps" type="text">
+                        <input placeHolder="Reps" [(ngModel)]="exercise.reps" type="number">
                     </div>
                     <div class="col-m-3 exCol">
-                        <input placeHolder="Weights" type="text">
+                        <input placeHolder="Weights" [(ngModel)]="exercise.weights" type="number">
                     </div>
                 </div>
             </div>

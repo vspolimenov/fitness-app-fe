@@ -1,4 +1,5 @@
-import { AuthenticationService } from './../login-component/login.service';
+import { WorkoutService } from './../services/workout.service';
+import { AuthenticationService } from './../services/login.service';
 import { Workout } from './../model/workout';
 import { Component, OnInit } from '@angular/core';
 import { Exercise } from '../model/exercise';
@@ -12,12 +13,10 @@ export class WorkComponent implements OnInit  {
   workouts:Workout[];
   date:Date;
   isStarted:boolean;
-  constructor( private _service:AuthenticationService) {
+  constructor( private _service:AuthenticationService, private workoutService:WorkoutService) {
     this.date = new Date();
     this.isStarted = false;
-    this.workouts= [new Workout(), new Workout()];
-    this.workouts[0].exercises = [ new Exercise("Squat",12,4,90),new Exercise("Bench",12,4,90),
-    new Exercise("RMD",12,4,90)];
+    this.workouts= [this.workoutService.getTrainingDay(), new Workout()];
   }
  
   start(){
