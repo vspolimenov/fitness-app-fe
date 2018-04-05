@@ -11,64 +11,66 @@
     </div>
 
     <div class="row">
-            <div class="col-md-4">
-        <div class="row">
-            <div class="input-field col-sm-12">
-                <input [(ngModel)]="user.firstName" id="namef" type="text" class="validate">
-                <label for="namef">Fisrt Name</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col-sm-12">
-                <input [(ngModel)]="user.lastName" id="namel" type="text" class="validate">
-                <label for="namel">Last Name</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col-sm-12">
-                <input [(ngModel)]="user.age" id="age" type="number" class="validate">
-                <label for="age">Age</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col-sm-12">
-                <input [(ngModel)]="user.weight" id="weight" type="number" class="validate">
-                <label for="weight">Weight</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col-sm-12">
-                <input [(ngModel)]="user.height" id="height" type="number" class="validate">
-                <label for="email">Height</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col-sm-12">
-                <input [(ngModel)]="user.email" id="email" type="email" class="validate">
-                <label for="email">Email</label>
-            </div>
-        </div>
+        <div class="col-md-4">
+            <form>
+                <div class="row">
+                    <div class="input-field col-sm-12">
+                        <input required [(ngModel)]="user.firstName" name="namef" id="namef" type="text" class="validate">
+                        <label for="namef">Fisrt Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col-sm-12">
+                        <input required [(ngModel)]="user.lastName" id="namel" name="namel" type="text" class="validate">
+                        <label for="namel">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col-sm-12">
+                        <input required [(ngModel)]="user.age" id="age" name="age" type="number" class="validate">
+                        <label for="age">Age</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col-sm-12">
+                        <input required [(ngModel)]="user.weight" id="weight" name="weight" type="number" class="validate">
+                        <label for="weight">Weight</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col-sm-12">
+                        <input required [(ngModel)]="user.height" id="height" name="height" type="number" class="validate">
+                        <label for="email">Height</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col-sm-12">
+                        <input required [(ngModel)]="user.email" id="email" name="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
 
 
-        <div class="row">
-            <div class="input-field col-sm-12">
-                <input [(ngModel)]="user.password" id="password" type="password" class="validate">
-                <label for="password">Password</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col-sm-12">
-                <input id="passwordc" type="password" class="validate">
-                <label for="password">Confirm Password</label>
-            </div>
-        </div>
+                <div class="row">
+                    <div class="input-field col-sm-12">
+                        <input required [(ngModel)]="user.password" id="password" name="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col-sm-12">
+                        <input required id="passwordc" [(ngModel)]="confirmedPassword" name="passwordc" type="password" class="validate">
+                        <label for="password">Confirm Password</label>
+                    </div>
+                </div>
+                <span>{{errorMsg}}</span>
+                <input type="submit" (click)="registrate()" class="btn waves-effect waves-light" name="submit" [disabled]="!isValidData()" value="Start">
+            </form>
 
-        <span>{{errorMsg}}</span>
-        <button (click)="registrate()" class="btn waves-effect waves-light" type="submit" name="action">Start</button>
-    </div>
+        </div>
         <div class="col-md-4">
 
-            <img class="rounded"  src="../assets/reg.jpg" alt="New York" width="500" height="500">
+            <img class="rounded" src="../assets/reg.jpg" alt="New York" width="500" height="500">
         </div>
     </div>
     <br>

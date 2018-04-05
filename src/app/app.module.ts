@@ -1,3 +1,4 @@
+import { ProfileService } from './profile.service';
 import { WorkoutComponent } from './articles/workout-component/workout.component';
 import { FoodComponent } from './articles/food-component/food.component';
 import { LifeStyleComponent } from './articles/life-style-component/lifestyle.component';
@@ -38,7 +39,7 @@ import { RegistrationComponent } from './registration-component/registration.com
     AppRoutingModule,
     FormsModule
   ],
-  providers: [AuthenticationService],
+  providers: [AuthenticationService, ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

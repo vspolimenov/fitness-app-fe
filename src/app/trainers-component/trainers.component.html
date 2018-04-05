@@ -30,7 +30,26 @@
                 </div>
                 <div class="row">
                     <div class="col-m-12">
-                        <button type="button" class="btn btn-block">Contact {{trainer.name}}</button>
+                        <button type="button" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">Contact {{trainer.name}}</button>
+                        <div class="modal fade" id="myModal" role="dialog">
+                          <div class="modal-dialog">
+                       
+                            <div class="modal-content">
+                              <div class="modal-header"> 
+                                 <h4 class="modal-title">Send message</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <div class="modal-body">
+                                   <input placeholder="Type here...">
+                              </div>
+                              <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Send</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
                     </div>
                 </div>
 

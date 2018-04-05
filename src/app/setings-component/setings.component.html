@@ -1,42 +1,58 @@
 <div class="page">
-        <div class="row">
-            <div class="col-md-12 personalInformationTitle block-container">
-                  <h1>Profile Setings.</h1>  
-                  <h2> Here is where you can change your personal information</h2>
-            </div>
+    <div class="row">
+        <div class="col-md-12 personalInformationTitle block-container">
+            <h1>Profile Setings.</h1>
+            <h2> Here is where you can change your personal information</h2>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                    <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236"> 
-                    <br>
-                    <br>
-                    <br>
-                    <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236"> 
-                    <br>
-                    <br>
-                    <br>
-                    <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236"> 
-                </div>
-            <div class="col-md-4" class="block-container">
-               
-                    <span><b>Age</b>: 21</span>
-                    <button type="button" (click)="activateAge();" class="btn">Change</button>
-                    <input type="text" *ngIf="ageActivated">
-                    <span><b>Gender</b>: Male</span>
-                    <button type="button" class="btn">Change</button>
-                    <span><b>Height</b>: 1.74</span>
-                    <button type="button" class="btn">Change</button>
-                    <span> <b>Weight</b>: 72</span>
-                    <button type="button" class="btn">Change</button>
-                    <span><b>Username</b>: 21</span>
-                    <button type="button" class="btn">Change</button>
-                    <span><b>Password</b>: Male</span>
-                    <button type="button" class="btn">Change</button>
-                    <span><b>Are you trainer</b>: NO</span>
-                    <button type="button" class="btn">Change</button>
-          
-            </div>
-        </div>
-        <br>
-        <br>   
     </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236">
+            <br>
+            <br>
+            <br>
+            <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236">
+            <br>
+            <br>
+            <br>
+            <img src="../assets/1.jpg" class="img-rounded" alt="img" width="304" height="236">
+        </div>
+        <div class="col-md-4" class="block-container">
+
+            <span>
+                <b>Age: </b>:<br>
+                <input [(ngModel)]="user.age" type="number">
+                <br>
+            </span>
+
+            <span>
+                <b>Gender</b>:<br>
+                <div class="radio">
+                    <label>
+                        <input  type="radio" name="optradio">Male</label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optradio">Female</label>
+                </div>
+            </span>
+            <span>
+                <b>Height</b>:<br> <input [(ngModel)]="user.height"  type="number"></span>
+            <span>
+                <b>Weight</b>:<br>  <input [(ngModel)]="user.weight" type="number"></span>
+            <span>
+                <b>First Name</b>:<br>  <input [(ngModel)]="user.firstName" type="text"></span>
+            <span>
+                <b>Last Name</b>:<br>  <input [(ngModel)]="user.lastName" type="text"></span>
+            <span>
+                <b>Are you trainer?</b><br> <input type="checkbox">Yes
+            </span>
+            <br>
+            <br>
+            <input type="submit" (click)="changeInformation()"  class="btn waves-effect waves-light" name="submit"  value="Change">
+        </div>
+
+    </div>
+    <br>
+    <br>
+</div>

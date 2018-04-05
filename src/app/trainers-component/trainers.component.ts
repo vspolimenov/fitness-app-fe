@@ -18,6 +18,10 @@ export class TrainersComponent implements OnInit{
     new Trainer("Ivan", "0875524912",19,2)];
   }
 
+  contactTrainer(){
+    
+  }
+
   ngOnInit() {
     this._service.checkCredentials();
   }

@@ -1,3 +1,5 @@
+import { User } from './../model/user';
+import { ProfileService } from './../profile.service';
 import { AuthenticationService } from './../login-component/login.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,13 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SetingsComponent  implements OnInit {
   public ageActivated:boolean;
-  
-  constructor( private _service:AuthenticationService) {
+  public user:User;
+
+  constructor( private _service:AuthenticationService, private profileService: ProfileService) {
   this.ageActivated = false;
+
+  }
+  
+  changeInformation(){
+    this.profileService.setUser(this.user);
   }
 
-
   ngOnInit() {
+    this.user = this.profileService.getUserFromLocalStorage();
     this._service.checkCredentials();
   }
 
