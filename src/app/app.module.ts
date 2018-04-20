@@ -1,3 +1,6 @@
+import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalService } from './modals/modal-service';
+import { EditProgramModal } from './modals/edit-program-modal';
 import { EditProgramComponent } from './edit-program-component/edit-program.component';
 import { WorkoutService } from './services/workout.service';
 import { ProfileService } from './services/profile.service';
@@ -35,14 +38,16 @@ import { RegistrationComponent } from './registration-component/registration.com
     LifeStyleComponent,
     WorkoutComponent,
     FoodComponent, 
-    EditProgramComponent
+    EditProgramComponent,
+    EditProgramModal
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule.forRoot()
   ],
-  providers: [AuthenticationService, ProfileService, WorkoutService],
+  providers: [AuthenticationService, ProfileService, WorkoutService, ModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

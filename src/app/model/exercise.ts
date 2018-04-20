@@ -7,6 +7,7 @@ export class Exercise {
         this.weight = weight;
 
     }
+    
 
     public  name:string;
     public  rep:number;

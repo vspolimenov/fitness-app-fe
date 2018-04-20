@@ -8,6 +8,10 @@
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
+.exCol {
+    margin: 50px;
+}
+
 
 .slider:hover {
     opacity: 1;

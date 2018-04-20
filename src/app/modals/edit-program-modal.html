@@ -1,0 +1,33 @@
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="row">
+
+                <div class="col-m-3 exCol">
+                    Exercise: <br>
+                    <input placeHolder="Excercise" [(ngModel)]="exercise.name" type="text">
+                </div>
+                <div class="col-m-3 exCol">
+                    Sets: <br>
+                    <input placeHolder="Sets" [(ngModel)]="exercise.set" type="number">
+                </div>
+                <div class="col-m-3 exCol">
+                    Reps: <br>
+                    <input placeHolder="Reps" [(ngModel)]="exercise.rep" type="number">
+                </div>
+                <div class="col-m-3 exCol">
+                    Weights: <br>
+                    <input placeHolder="Weights" [(ngModel)]="exercise.weight" type="number">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button (click)="addNewExercise(index);" data-dismiss="modal" class="btn btn-lg">Add</button>
+                <button type="button" class="btn btn-lg" data-dismiss="modal">Close</button>
+            </div>
+            <br>
+
+        </div>
+
+    </div>
+</div>
